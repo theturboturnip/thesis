@@ -135,16 +135,22 @@
     \RequirePackage[
         pdfpagelabels=false,
         pdfborder={0 0 0},
-        pdfusetitle=true
+        pdfusetitle=true,
+        unicode
     ]{hyperref}
 \else
     \RequirePackage[
         pdffitwindow=true,
         pdfpagelabels=true,
-        colorlinks=false,
+        colorlinks=true,
         pdfborder={0 0 0},
-        pdfusetitle=true
+        pdfusetitle=true,
+        unicode
     ]{hyperref}
+
+    % Setup nice fonts and link colors
+    % PhD formatting is more lenient than TRs, so only use this on theses
+    \RequirePackage[linkcolors]{turnipstyle}
 \fi
 \RequirePackage[all]{hypcap}        % Fixes links to floats (must be included after hyperref).
 
